@@ -1,0 +1,58 @@
+.joke {
+
+    &__form {
+
+        font-size: 3rem;
+
+    }
+
+    &__input {
+
+        
+
+    }
+
+    &__number {
+
+        font-size: 2.5rem;
+        font-family: inherit;
+        display: block;
+
+        margin: 2rem 0;
+        padding: 1rem 1rem;
+
+    }
+
+    &__btn {
+
+        font-size: 2rem;
+        font-family: inherit;
+        font-weight: 300;
+        display: block;
+        
+        padding: 1rem 4rem;
+        border: none;
+
+        background-color: $color-secondary;
+
+        cursor: pointer;
+        transition: all .2s;
+
+        &:hover {
+
+            background-color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba(#000, .15);
+            transform: translateY(-.2rem);
+
+        }
+
+        &:active {
+
+            box-shadow: 0 .5rem 1rem rgba(#000, .15);
+            transform: translateY(0);
+
+        }
+
+    }
+
+}
