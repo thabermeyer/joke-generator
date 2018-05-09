@@ -55,4 +55,56 @@
 
     }
 
+    &__output {
+
+        font-size: 2rem;
+        
+        display: grid;
+        grid-template-columns: repeat(2, 15rem) 1fr;
+
+        margin-top: 3rem;
+
+        &-header {
+
+            font-weight: 400;
+            border-bottom: #000 solid .1rem;
+            padding-bottom: 1rem;
+            text-align: center;
+
+        }
+
+        &-number {
+
+            text-align: center;
+            
+            border-bottom: #000 solid .1rem;
+            padding: 3rem;
+
+            background-color: $color-primary;
+
+        }
+
+        &-class {
+
+            text-align: center;
+
+            border-bottom: #000 solid .1rem;
+            padding: 3rem;
+
+            background-color: $color-secondary;
+
+        }
+
+        &-content {
+
+            font-size: 1.5rem;
+            line-height: 1.2;
+            
+            border-bottom: #000 solid .1rem;
+            padding: 2rem;
+
+        }
+
+    }
+
 }
