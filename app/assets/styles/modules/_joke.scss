@@ -60,9 +60,9 @@
         font-size: 2rem;
         
         display: grid;
-        grid-template-columns: repeat(2, 15rem) 1fr;
+        grid-template-columns: 15rem 1fr;
 
-        margin-top: 3rem;
+        margin: 3rem 0;
 
         &-header {
 
@@ -84,21 +84,10 @@
 
         }
 
-        &-class {
-
-            text-align: center;
-
-            border-bottom: #000 solid .1rem;
-            padding: 3rem;
-
-            background-color: $color-secondary;
-
-        }
-
         &-content {
 
             font-size: 1.5rem;
-            line-height: 1.2;
+            line-height: 1.6;
             
             border-bottom: #000 solid .1rem;
             padding: 2rem;

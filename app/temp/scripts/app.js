@@ -9062,28 +9062,27 @@ function getJokes(e) {
 
                         if (this.status === 200) {
 
+                                    document.querySelector('.joke__output').innerHTML = '<div class="joke__output-header">#</div>\n            <div class="joke__output-header">Joke</div>';
+
                                     var response = JSON.parse(this.responseText);
 
-                                    console.log(JSON.parse(this.responseText));
+                                    var output = '';
+                                    var i = 0;
 
-                                    /*
-                                      let output = '';
-                                    let i = 0;
-                                      if(response.type === 'success') {
-                                          response.value.forEach(function(joke) {
-                                              i++;
-                                              output += 
-                                            
-                                            `<div class="joke__output-number">${i}</div>
-                                             <div class="joke__output-class">${joke.categories}</div> // this is an array and that's a problem
-                                             <div class="joke__output-content">${joke.joke}</div>
-                                            `
-                                          });
-                                      } else {
-                                          output += '<li>Something went wrong.</li>'
-                                      }
-                                      document.querySelector('.joke__output').innerHTML = output;
-                                      */
+                                    if (response.type === 'success') {
+
+                                                response.value.forEach(function (joke) {
+
+                                                            i++;
+
+                                                            output += '<div class="joke__output-number">' + i + '</div>\n                     <div class="joke__output-content">' + joke.joke + '</div>\n                    ';
+                                                });
+                                    } else {
+
+                                                output += '<div>Something went wrong.</div>';
+                                    }
+
+                                    document.querySelector('.joke__output').innerHTML += output;
                         }
             };
 

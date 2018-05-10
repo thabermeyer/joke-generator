@@ -12,11 +12,12 @@ function getJokes(e) {
 
         if(this.status === 200) {
 
-            const response = JSON.parse(this.responseText);
+            document.querySelector('.joke__output').innerHTML = 
 
-            console.log(JSON.parse(this.responseText));
-            
-            /*
+            `<div class="joke__output-header">#</div>
+            <div class="joke__output-header">Joke</div>`;
+
+            const response = JSON.parse(this.responseText);
 
             let output = '';
             let i = 0;
@@ -30,7 +31,6 @@ function getJokes(e) {
                     output += 
                     
                     `<div class="joke__output-number">${i}</div>
-                     <div class="joke__output-class">${joke.categories}</div> // this is an array and that's a problem
                      <div class="joke__output-content">${joke.joke}</div>
                     `
 
@@ -38,13 +38,12 @@ function getJokes(e) {
 
             } else {
 
-                output += '<li>Something went wrong.</li>'
+                output += '<div>Something went wrong.</div>'
 
             }
 
-            document.querySelector('.joke__output').innerHTML = output;
+            document.querySelector('.joke__output').innerHTML += output;
 
-            */
 
         }
 
